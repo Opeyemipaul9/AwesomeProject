@@ -8,6 +8,10 @@ const HomeScreen = props => {
   return (
     <View style={{ flex: 1 }}>
       <Text style={styles.subText}>Hi There</Text>
+      <Button
+        onPress={() => navigation.navigate('Search')}
+        title = 'Search Screen'
+      />
     </View>
   )
 };
