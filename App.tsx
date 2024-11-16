@@ -1,18 +1,21 @@
 import React from 'react';
 import { createStaticNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from './src/HomeScreen';
-import SearchScreen from './src/SearchScreen';
+import ResultsShowScreen from './src/screens/ResultsShowScreen';
+
+import SearchScreen from './src/screens/SearchScreen';
 
 const RootStack = createNativeStackNavigator({
-  initialRouteName: 'Home',
-  defaultNavigationOptions:{
-    title:'BusinessSearch'
-  },
+  initialRouteName: 'Search',
   screens: {
-    Home: HomeScreen,
-    Search:SearchScreen
-  },
+    Search:{
+      screen: SearchScreen,
+      options: {
+        title: 'Business Search',
+      },
+    },
+    ResultsShow:ResultsShowScreen ,  
+  }
 });
 
 const Navigation = createStaticNavigation(RootStack);
