@@ -19,7 +19,6 @@ const ResultsShowScreen = ( {route} ) => {
     if(!result){
         return null;
     }
-    console.log(result.photos)
         
     return (
         

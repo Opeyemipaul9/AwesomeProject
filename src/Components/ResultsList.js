@@ -18,7 +18,7 @@ const ResultsList = ({title, results, navigation})=>{
             horizontal
             showsHorizontalScrollIndicator = {false}
             data = {results}
-            keyExtractor={(result)=> result.id}
+            keyExtractor={result=> result.id}
             renderItem={({item})=>{
                 return ( <TouchableOpacity onPress={()=>navigation.navigate('ResultsShow', {id:item.id})}>
                 <ResultsDetail result ={item}/>
